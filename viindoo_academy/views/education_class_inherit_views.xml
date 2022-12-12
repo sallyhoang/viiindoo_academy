@@ -1,0 +1,23 @@
+<odoo>
+	<data>
+
+		<record id="education_class_view_form2" model="ir.ui.view">
+			<field name="name">education.class.inherit</field>
+			<field name="model">education.class</field>
+			<field name="inherit_id"
+				ref="viindoo_academy.education_class_view_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="after">
+					<field name="country_id" string="Country" />
+				</xpath>
+				<xpath expr="/form/sheet/notebook/page[@name='students']" position="after">
+					<field name="note" string="Note" />
+				</xpath>
+			</field>
+		</record>
+
+
+
+
+	</data>
+</odoo>

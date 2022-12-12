@@ -1,0 +1,56 @@
+<odoo>
+	<data>
+		<record id="res_ethnic_view_tree" model="ir.ui.view">
+			<field name="name">res.ethnic.tree</field>
+			<field name="model">res.ethnic</field>
+			<field name="arch" type="xml">
+				<tree string="Ethnic Tree">
+					<field name="name" />
+					<field name="code" />
+					<field name="country_ids" />
+				</tree>
+			</field>
+		</record>
+
+
+		<record id="res_ethnic_view_form" model="ir.ui.view">
+			<field name="name">res.ethnic.form</field>
+			<field name="model">res.ethnic</field>
+			<field name="arch" type="xml">
+				<form string="Ethnic Form">
+					<sheet>
+						<div class="oe_title">
+							<h1>
+								<field name="name"
+									placeholder="Please input name of the ethnic" />
+							</h1>
+						</div>
+						<group>
+							<field name="code" />
+							<field name="other_name" />
+							<field name="country_ids" />
+							<field name="description" />
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+
+
+		<record id="res_ethnic_action" model="ir.actions.act_window">
+			<field name="name">Ethnic</field>
+			<field name="res_model">res.ethnic</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="res_ethnic_menu" action="res_ethnic_action"
+			parent="root_menu" sequence="15" />
+
+
+
+
+
+
+
+	</data>
+</odoo>
